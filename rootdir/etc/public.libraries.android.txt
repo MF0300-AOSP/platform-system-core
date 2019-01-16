@@ -1,7 +1,6 @@
 libandroid.so
 libaaudio.so
 libc.so
-libcamera2ndk.so
 libdl.so
 libEGL.so
 libGLESv1_CM.so
