@@ -805,9 +805,9 @@ static void export_kernel_boot_props() {
         { "ro.boot.serialno",   "ro.serialno",   "", },
         { "ro.boot.mode",       "ro.bootmode",   "unknown", },
         { "ro.boot.baseband",   "ro.baseband",   "unknown", },
-        { "ro.boot.bootloader", "ro.bootloader", "unknown", },
-        { "ro.boot.hardware",   "ro.hardware",   "unknown", },
-        { "ro.boot.revision",   "ro.revision",   "0", },
+        { "ro.boot.bootloader", "ro.bootloader", "u-boot", },
+        { "ro.boot.hardware",   "ro.hardware",   "freescale", },
+        { "ro.boot.revision",   "ro.revision",   "2018", },
         { "ro.boot.zygote",     "ro.zygote",     "zygote32", },
     };
     for (size_t i = 0; i < ARRAY_SIZE(prop_map); i++) {
