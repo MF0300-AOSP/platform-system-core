@@ -232,7 +232,10 @@ LOCAL_CFLAGS := \
     -D_GNU_SOURCE \
     -Wno-deprecated-declarations \
 
-LOCAL_CFLAGS += -DALLOW_ADBD_NO_AUTH=$(if $(filter userdebug eng,$(TARGET_BUILD_VARIANT)),1,0)
+# allow adb connection without verification
+# because we have disabled status bar
+# that means we have no ability to check verification message dialog
+LOCAL_CFLAGS += -DALLOW_ADBD_NO_AUTH=1
 
 ifneq (,$(filter userdebug eng,$(TARGET_BUILD_VARIANT)))
 LOCAL_CFLAGS += -DALLOW_ADBD_DISABLE_VERITY=1
