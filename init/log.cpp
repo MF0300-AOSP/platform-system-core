@@ -28,7 +28,7 @@ static void init_klog_vwrite(int level, const char* fmt, va_list ap) {
     char prefix[64];
     snprintf(prefix, sizeof(prefix), "<%d>%s: ", level, tag);
 
-    char msg[512];
+    char msg[4096];
     vsnprintf(msg, sizeof(msg), fmt, ap);
 
     iovec iov[2];
